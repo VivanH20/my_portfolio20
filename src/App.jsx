@@ -167,8 +167,8 @@ export default function App() {
       {activeMenu && (
         <div style={{
           position: 'absolute', 
-          top: '35%', 
-          left: '15%', 
+          top: '15%', 
+          left: '10%', 
           zIndex: 10,
           background: 'rgba(15, 23, 42, 0.9)', 
           padding: '1.5rem', 
