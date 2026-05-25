@@ -21,6 +21,12 @@ export default function App() {
   const [activeMenu, setActiveMenu] = useState(null);
   
   const { progress } = useProgress();
+  
+  const [smoothProgress, setSmoothProgress] = useState(0);
+  useEffect(() => {
+    setSmoothProgress((prev) => Math.max(prev, progress));
+  }, [progress]);
+
   const cameraControlRef = useRef();
 
   // Tracks which line we are on, and how many characters of that line are typed
@@ -35,7 +41,7 @@ export default function App() {
   ];
 
   useEffect(() => {
-    if (progress === 100 && textState.line < terminalLines.length) {
+    if (smoothProgress >= 100 && textState.line < terminalLines.length) {
       const currentLineLength = terminalLines[textState.line].length;
       
       // If the current line is still typing out characters
@@ -111,12 +117,12 @@ export default function App() {
         }}>
           
           {/* 1. Loading Phase */}
-          {progress < 100 && (
-            <h2>SYSTEM BOOTING... {Math.round(progress)}%</h2>
+          {smoothProgress < 100 && (
+            <h2>SYSTEM BOOTING... {Math.round(smoothProgress)}%</h2>
           )}
 
           {/* 2. Terminal Intro Phase (Starts when progress hits 100%) */}
-          {progress === 100 && (
+          {smoothProgress >= 100 && (
             <div style={{ textAlign: 'left', width: '650px', marginBottom: '40px', lineHeight: '2' }}>
               {terminalLines.map((line, index) => {
                 // If this line is already fully typed, render the whole thing
