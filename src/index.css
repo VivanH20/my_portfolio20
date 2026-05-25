@@ -113,23 +113,3 @@ code {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
-
-/* This targets the actual pop-up box inside your overlay */
-.intro-overlay > div {
-  max-height: 70vh;
-  overflow-y: auto;
-  font-size: 0.9rem;
-}
-
-/* This makes the scrollbar look sleek */
-.intro-overlay > div::-webkit-scrollbar {
-  width: 6px;
-}
-.intro-overlay > div::-webkit-scrollbar-thumb {
-  background: #00e5ff; /* Matches your glowing blue theme */
-  border-radius: 5px;
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 31b7df0eae33acbddf13c29755fa7800d1e1adf2
