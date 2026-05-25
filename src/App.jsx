@@ -189,7 +189,7 @@ export default function App() {
                 cameraControlRef.current.setLookAt(12, 10, -19, 0, 0, 0, true);
               }
             }}
-            style={{ float: 'right', background: 'transparent', color: 'white', border: 'none', cursor: 'pointer', fontSize: '1.8rem', fontWeight: 'bold' }}
+            style={{ float: 'right', background: 'transparent', color: 'white', border: 'none', cursor: 'pointer', fontSize: '1.4rem', fontWeight: 'bold' }}
           >
             X
           </button>

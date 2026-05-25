@@ -128,4 +128,8 @@ code {
 .intro-overlay > div::-webkit-scrollbar-thumb {
   background: #00e5ff; /* Matches your glowing blue theme */
   border-radius: 5px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 31b7df0eae33acbddf13c29755fa7800d1e1adf2
