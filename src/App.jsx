@@ -167,7 +167,7 @@ export default function App() {
       {activeMenu && (
         <div style={{
           position: 'absolute', 
-          top: '25%', 
+          top: '35%', 
           left: '15%', 
           zIndex: 10,
           background: 'rgba(15, 23, 42, 0.9)', 
@@ -194,7 +194,6 @@ export default function App() {
             X
           </button>
           
-          /* New Code */
           <h2 style={{ marginTop: 0, color: '#00f0ff', fontSize: '1.8rem' }}>{activeMenu}</h2>
           
           {/* --- WORKS SECTION --- */}
