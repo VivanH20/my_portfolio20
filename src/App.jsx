@@ -167,16 +167,16 @@ export default function App() {
       {activeMenu && (
         <div style={{
           position: 'absolute', 
-          top: '15%', 
-          left: '10%', 
+          top: '25%', 
+          left: '15%', 
           zIndex: 10,
           background: 'rgba(15, 23, 42, 0.9)', 
-          padding: '3rem', 
+          padding: '1.5rem', 
           borderRadius: '12px',
           color: 'white', 
           border: '1px solid #00f0ff', 
           width: '500px', 
-          fontSize: '1.4rem', 
+          fontSize: '1rem', 
           fontFamily: 'sans-serif', 
           backdropFilter: 'blur(5px)',
           boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)'
@@ -194,7 +194,8 @@ export default function App() {
             X
           </button>
           
-          <h2 style={{ marginTop: 0, color: '#00f0ff', fontSize: '2.4rem' }}>{activeMenu}</h2>
+          /* New Code */
+          <h2 style={{ marginTop: 0, color: '#00f0ff', fontSize: '1.8rem' }}>{activeMenu}</h2>
           
           {/* --- WORKS SECTION --- */}
           {activeMenu === 'WORKS' && (
